@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* content-box: padding y border se SUMAN al ancho total */
+  /* border-box: padding y border NO aumentan el ancho total (recomendado) */
+}
+
+:root {
+  --fondo: #eceaea;
+  --tarjeta: #48baf36e;
+  --texto: #000000;
+  --texto-secundario: #666666c1;
+  --texto-enlaces: #54064bd2;
+  --acento: #269bd56e;
+  --codigo-fondo: #a2ff9d8f;
+  --fuente-principal: "Inter", "Arial", sans-serif;
+  --fuente-codigo: "Courier New", monospace;
+  --fuente-titulos: "Playfair Display", Georgia, serif;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 800;
+}
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fuente-titulos);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+nav {
+  background-color: var(--tarjeta);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+nav a {
+  text-decoration: none;
+  color: var(--texto);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+nav a:hover {
+  background-color: var(--acento);
+  color: #fff;
+}
+section {
+  background-color: var(--tarjeta);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+section a {
+  text-decoration: none;
+  color: var(--texto-enlaces);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+section:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+code {
+  background-color: var(--codigo-fondo);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: var(--fuente-codigo);
+  font-size: 0.875rem;
+  word-wrap: break-word;
+  white-space: normal;
+}
+pre {
+  background-color: #1e1e1e;
+  color: #ebe0e0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: var(--fuente-codigo);
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+table th,
+table td {
+  padding: 0.55rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+table th {
+  background-color: var(--acento);
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset {
+  border: 1px solid var(--acento);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+legend {
+  font-weight: bold;
+  color: var(--acento);
+  padding: 0 0.5rem;
+}
+
+input,
+textarea,
+select {
+  padding: 0.75rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+button,
+input[type="submit"] {
+  background-color: var(--acento);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+button:hover,
+input[type="submit"]:hover {
+  background-color: #000000;
+  transition: background-color 0.2s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--acento);
+  color: var(--texto-secundario);
+}
+footer a {
+  color: var(--texto-enlaces);
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  table th,
+  table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+}
