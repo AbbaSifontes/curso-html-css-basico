@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* uso border box para que el padding no afecte al tamaño total del elemento */
+}
+:root {
+  --fondo: #f0fdf4;
+  --tarjeta: #ffffff;
+  --acento: #22c55e;
+  --texto: #14532d;
+  --texto-secundario: #4a7c59;
+  --sombra: 0 8px 20px rgba(0, 0, 0, 0.2);
+  --fuente-titulos: "Playfair Display SC", serif;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: "inter", sans-serif;
+  line-height: 1.5;
+  padding: 1rem;
+  /* overflow-y: hidden; */
+}
+
+.servicios {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.tarjeta {
+  background-color: var(--tarjeta);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--sombra);
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  margin: 0 1rem 1.5rem 0;
+  min-height: 150px; /* para que todas las tarjetas tengan la misma altura */
+}
+.tarjeta:last-child {
+  margin-right: 0;
+}
+
+.tarjeta-icono {
+  font-size: 3rem;
+  color: var(--acento);
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--texto);
+  font-weight: 600;
+}
+
+.tarjeta p {
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--acento);
+  color: var(--tarjeta);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003f17;
+  color: var(--tarjeta);
+  transition: inherit;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+  transition: inherit;
+}
+
+.tarjeta h2,
+h1 {
+  font-family: var(--fuente-titulos);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+@media (max-width: 768px) {
+  .tarjeta {
+    width: 90%;
+    margin: 0 auto 1.5rem auto;
+    min-height: 30vh;
+    padding: 10px 5px;
+  }
+  /* .tarjeta p {
+    word-break: break-word;
+  } */
+}
