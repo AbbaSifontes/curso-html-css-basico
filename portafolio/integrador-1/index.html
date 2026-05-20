@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revista CSS | Integrador</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="description" content="Proyecto Integrador 1" />
+    <meta property="og:title" content="Landing page" />
+    <meta property="og:description" content="Landing page" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Revista CSS</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#articulos">Artículos</a></li>
+          <li><a href="#metricas">Métricas</a></li>
+          <li><a href="#suscripcion">Suscripción</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="inicio" class="hero">
+      <div class="hero-contenido">
+        <h1>Bienvenido a Revista CSS</h1>
+        <p>
+          Descubre artículos técnicos, tutoriales y las últimas tendencias en
+          desarrollo front-end.
+        </p>
+        <a href="#articulos" class="btn-hero">Ver artículos</a>
+      </div>
+    </section>
+    <section id="articulos" class="articulos">
+      <h2>Artículos destacados</h2>
+      <div class="articulos-grid">
+        <article class="tarjeta">
+          <div class="badge">Nuevo</div>
+          <h3>CSS Clásico vs Moderno</h3>
+          <p>
+            Descubre las diferencias entre floats, inline-block y Flexbox.
+            Técnicas que siguen vigentes.
+          </p>
+          <a href="#" class="btn-articulo">Leer más</a>
+        </article>
+
+        <article class="tarjeta">
+          <div class="badge">Tutorial</div>
+          <h3>Maquetación con inline-block</h3>
+          <p>
+            Aprende a crear grids responsivos usando inline-block y cálculos
+            matemáticos precisos.
+          </p>
+          <a href="#" class="btn-articulo">Leer más</a>
+        </article>
+
+        <article class="tarjeta">
+          <div class="badge">Consejos</div>
+          <h3>Centrado con margin: auto</h3>
+          <p>
+            El clásico truco de centrar bloques que todo desarrollador front-end
+            debe conocer.
+          </p>
+          <a href="#" class="btn-articulo">Leer más</a>
+        </article>
+      </div>
+    </section>
+    <section id="metricas" class="metricas">
+      <h2>Métricas de la revista</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Artículo</th>
+              <th>Visualizaciones</th>
+              <th>Compartido</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CSS Clásico vs Moderno</td>
+              <td>12,450</td>
+              <td>345</td>
+              <td>Mayo 2025</td>
+            </tr>
+            <tr>
+              <td>Maquetación con inline-block</td>
+              <td>8,230</td>
+              <td>189</td>
+              <td>Abril 2025</td>
+            </tr>
+            <tr>
+              <td>Centrado con margin: auto</td>
+              <td>5,980</td>
+              <td>97</td>
+              <td>Abril 2025</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">*Datos acumulados hasta mayo 2025</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+    <section id="suscripcion" class="suscripcion">
+      <h2>Suscríbete a la revista</h2>
+      <p>Recibe los mejores artículos cada mes en tu correo.</p>
+
+      <form action="#" method="post" class="form-suscripcion">
+        <fieldset>
+          <legend>Formulario de suscripción</legend>
+
+          <div class="campo">
+            <label for="nombre">Nombre completo:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tu@email.com"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-suscripcion">Suscribirme</button>
+        </fieldset>
+      </form>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2025 Revista CSS - Todos los derechos reservados.</p>
+      <p>Diseñado como proyecto integrador de CSS</p>
+    </footer>
+  </body>
+</html>
