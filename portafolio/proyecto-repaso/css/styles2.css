@@ -1,0 +1,153 @@
+/* ==========================================
+   1. CONFIGURACIÓN GLOBAL (RESET / VARIABLES)
+   ========================================== */
+/* Aquí va todo lo que afecta a toda la página por igual */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  /* color: rgb(49, 49, 49); */
+}
+
+:root {
+  --color-fondo: #0f172a;
+  --color-tarjeta: #1e293b;
+  --color-texto: #f8fafc;
+  --color-accento: #38bdf8;
+}
+/* ==========================================
+   2. ESTILOS DE ETIQUETAS BASE (ELEMENTOS)
+   ========================================== */
+/* Aquí van tus selectores de etiqueta pura (como tu p) */
+
+/* 
+==========================================
+   3. COMPONENTES Y UTILERÍAS (CLASES E IDS)
+   ========================================== */
+/* Aquí van tus clases específicas y tus IDs (.destacado, #alerta) */
+
+body {
+  background-color: var(--color-fondo);
+}
+main {
+  width: 90%; /* Hace que en celulares mantenga una separación de los bordes del teléfono */
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+.cabecera-perfil {
+  border: 2px solid #8e8e8e60;
+  text-align: center;
+  margin: 1rem auto;
+}
+.cabecera-perfil:hover {
+  border-color: var(--color-accento);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: solid 3px var(--color-accento);
+  margin: 0.5rem auto;
+}
+.cabecera-perfil h1 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.cabecera-perfil p {
+  color: var(--color-accento);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* enlaces */
+.enlaces {
+  background-color: var(--color-tarjeta);
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border: 2px solid #8e8e8e60;
+}
+.enlaces:hover {
+  border-color: var(--color-accento);
+}
+
+.caja-enlaces {
+  background-color: var(--color-tarjeta);
+  width: 90%;
+  display: block;
+  margin: 0.7rem auto;
+  border: 2px solid var(--color-accento);
+  border-radius: 8px;
+  padding: 0.7rem 2rem;
+  color: white;
+  text-decoration: none;
+}
+.caja-enlaces:hover {
+  background-color: #38bdf8;
+}
+.formulario {
+  padding: 0.3rem;
+  background-color: var(--color-tarjeta);
+  border: 2px solid #8e8e8e60;
+}
+.formulario:hover {
+  border-color: var(--color-accento);
+}
+
+/* Solo los elementos que la gente va a tocar/escribir ocupan todo el ancho */
+.formulario input,
+.formulario textarea,
+.formulario .btn {
+  width: 100%;
+  padding: 0.6rem; /* Aumento el padding para que sea fácil pulsar con el dedo */
+  margin-bottom: 0.7rem; /* Separo cada campo del siguiente hacia abajo */
+  display: block;
+}
+
+/* Las etiquetas (labels) y el título se quedan con su flujo natural */
+.formulario label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--color-accento); /* Un toque de color para que resalten */
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  color: white;
+}
+.formulario textarea {
+  height: 80px;
+  resize: none;
+}
+
+.formulario .btn {
+  color: black;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: var(--color-accento);
+}
+
+/* Seleccione el placeholder de todos los inputs y textareas */
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  color: #5398c3; /* color que prefiera*/
+  opacity: 1; /* Asegura que en navegadores como Firefox no se vea más claro de lo que quiero*/
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none; /* Quita el borde por defecto */
+  border: 2px solid var(--color-accento); /* Le pone mi color cian brillante */
+}
